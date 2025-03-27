@@ -1,6 +1,7 @@
 package com.example.order.controller;
 
 import com.example.order.dto.OrderDTO;
+import com.example.order.dto.Response;
 import com.example.order.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -26,7 +27,7 @@ public class OrderController {
     }
 
     @PostMapping("/addorder")
-    public OrderDTO saveOrder(@RequestBody OrderDTO orderDTO) {
+    public Response saveOrder(@RequestBody OrderDTO orderDTO) {
 
         return orderService.saveOrder(orderDTO);
     }

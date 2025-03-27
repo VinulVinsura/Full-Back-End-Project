@@ -39,7 +39,16 @@ public class InventoryServiceImpl implements InventoryService{
     }
 
     public InventoryDTO getItemById(Integer itemId) {
-        Inventory item = inventoryRepo.findByItemId(itemId);
-        return modelMapper.map(item, InventoryDTO.class);
+       try {
+           Inventory item = inventoryRepo.findByItemId(itemId);
+           if(item==null){
+               return null;
+           }
+           return modelMapper.map(item, InventoryDTO.class);
+       }
+       catch (Exception ex){
+           ex.printStackTrace();
+           return null;
+       }
     }
 }

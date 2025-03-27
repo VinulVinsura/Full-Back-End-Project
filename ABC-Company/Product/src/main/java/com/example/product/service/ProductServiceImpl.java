@@ -39,7 +39,16 @@ public class ProductServiceImpl implements ProductService {
     }
 
     public ProductDto getProductById(Integer productId) {
-        Product product = productRepo.findByProductId(productId);
-        return modelMapper.map(product, ProductDto.class);
+       try {
+           Product product = productRepo.findByProductId(productId);
+           if(product==null){
+               return null;
+           }
+           return modelMapper.map(product, ProductDto.class);
+       }
+       catch (Exception ex){
+           ex.printStackTrace();
+           return null;
+       }
     }
 }
