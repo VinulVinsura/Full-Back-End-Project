@@ -1,9 +1,13 @@
 package com.example.order.service;
 
+
+
 import com.example.inventory.dto.InventoryDTO;
+import com.example.order.dto.MessageDto;
 import com.example.order.dto.OrderDTO;
 import com.example.order.dto.Response;
 import com.example.order.entity.Order;
+import com.example.order.kafka.OrderProducer;
 import com.example.order.repostory.OrderRepo;
 import com.example.product.dto.ProductDto;
 import lombok.RequiredArgsConstructor;
@@ -23,6 +27,7 @@ public class OrderServiceImpl implements OrderService {
     private final OrderRepo orderRepo;
     private final WebClient webClient;
     private final OrderServiceClient orderServiceClient;
+    private final OrderProducer orderProducer;
     public List<OrderDTO> getAllOrders() {
         List<Order>orderList = orderRepo.findAll();
         return modelMapper.map(orderList, new TypeToken<List<OrderDTO>>(){}.getType());
@@ -50,12 +55,13 @@ public class OrderServiceImpl implements OrderService {
                 int productId=inventoryDTO.getProductId();
                 //using FeignClient
                 ProductDto product = orderServiceClient.getProductById(productId);
-//                System.err.println("===================================");
-//                System.out.println(product);
+
                 if(product.getForSale()==0){
                     return new Response("Product is not ready for sale",null);
                 }
                 Order save = orderRepo.save(modelMapper.map(orderDTO, Order.class));
+
+                orderProducer.sendMessage(new MessageDto("Order Plased","Success"));
                 return  new Response("Order save success",modelMapper.map(save, OrderDTO.class));
             }else {
                 return new Response("Item not available try later",null);
