@@ -2,6 +2,7 @@ package com.example.order.service;
 
 
 
+
 import com.example.inventory.dto.InventoryDTO;
 import com.example.order.dto.MessageDto;
 import com.example.order.dto.OrderDTO;
@@ -14,7 +15,7 @@ import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.stereotype.Service;
-import org.springframework.web.reactive.function.client.WebClient;
+
 
 import java.util.List;
 import java.util.Optional;
@@ -25,7 +26,7 @@ public class OrderServiceImpl implements OrderService {
 
     private final ModelMapper modelMapper;
     private final OrderRepo orderRepo;
-    private final WebClient webClient;
+
     private final ProductServiceClient productServiceClient;
     private final InventoryServiceClient inventoryServiceClient;
     private final OrderProducer orderProducer;
