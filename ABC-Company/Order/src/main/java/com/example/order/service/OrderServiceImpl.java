@@ -26,7 +26,8 @@ public class OrderServiceImpl implements OrderService {
     private final ModelMapper modelMapper;
     private final OrderRepo orderRepo;
     private final WebClient webClient;
-    private final OrderServiceClient orderServiceClient;
+    private final ProductServiceClient productServiceClient;
+    private final InventoryServiceClient inventoryServiceClient;
     private final OrderProducer orderProducer;
     public List<OrderDTO> getAllOrders() {
         List<Order>orderList = orderRepo.findAll();
@@ -38,13 +39,14 @@ public class OrderServiceImpl implements OrderService {
 
             int itemId=orderDTO.getItemId();
 
-            //using webClient
-            InventoryDTO inventoryDTO = webClient.get()
-                    .uri("http://localhost:8080/api/inventory/item/"+itemId)
-                    .retrieve()
-                    .bodyToMono(InventoryDTO.class)
-                    .block();
+//            //using webClient
+//            InventoryDTO inventoryDTO = webClient.get()
+//                    .uri("http://Inventory/api/inventory/item/"+itemId)
+//                    .retrieve()
+//                    .bodyToMono(InventoryDTO.class)
+//                    .block();
 
+            InventoryDTO inventoryDTO = inventoryServiceClient.getItemByItemId(itemId);
 
 
             if(inventoryDTO==null){
@@ -54,7 +56,7 @@ public class OrderServiceImpl implements OrderService {
             if(inventoryDTO.getQuantity()>0){
                 int productId=inventoryDTO.getProductId();
                 //using FeignClient
-                ProductDto product = orderServiceClient.getProductById(productId);
+                ProductDto product = productServiceClient.getProductById(productId);
 
                 if(product.getForSale()==0){
                     return new Response("Product is not ready for sale",null);
