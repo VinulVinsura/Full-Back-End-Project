@@ -25,13 +25,6 @@ public class OrderProducer {
     public void sendMessage(MessageDto messageDto){
         log.info(messageDto.toString());
 
-//        Message<MessageDto> message = MessageBuilder
-//                .withPayload(messageDto)
-//                .setHeader(KafkaHeaders.TOPIC, orderTopic.name())
-//                .build();
-
-//        log.info(message.toString());
-
         kafkaTemplate.send(TOPIC,messageDto);
     }
 

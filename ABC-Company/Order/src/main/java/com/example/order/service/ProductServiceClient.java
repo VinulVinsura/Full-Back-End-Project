@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Service
 public interface ProductServiceClient {
 
-    @GetMapping("/api/product/product/{productId}")
+    @GetMapping("/product-service/api/product/product/{productId}")
     ProductDto getProductById(@PathVariable Integer productId);
 
 }
