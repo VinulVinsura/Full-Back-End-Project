@@ -13,6 +13,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Service
 public interface InventoryServiceClient {
 
-    @GetMapping("/api/inventory/item/{itemId}")
+   @GetMapping("/api/inventory/item/{itemId}")
     InventoryDTO getItemByItemId(@PathVariable Integer itemId);
 }

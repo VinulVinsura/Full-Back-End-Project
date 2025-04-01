@@ -17,14 +17,12 @@
   <url>http://maven.apache.org</url>
   <modules>
 
-    <module>Order</module>
+    <module>Inventory</module>
     <module>Product</module>
     <module>Discovery</module>
-    <module>Inventory</module>
+    <module>Gateway</module>
+    <module>Order</module>
 
-
-
-<!--    <module></module>-->
 
   </modules>
 
