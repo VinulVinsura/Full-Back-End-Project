@@ -17,6 +17,7 @@
   <url>http://maven.apache.org</url>
   <modules>
 
+    <module>Common</module>
     <module>Inventory</module>
     <module>Product</module>
     <module>Discovery</module>

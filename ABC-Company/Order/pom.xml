@@ -60,19 +60,24 @@
 <!--            <version>3.4.4</version>-->
 <!--        </dependency>-->
 
+<!--        <dependency>-->
+<!--            <groupId>com.example</groupId>-->
+<!--            <artifactId>Inventory</artifactId>-->
+<!--            <version>0.0.1-SNAPSHOT</version>-->
+<!--        </dependency>-->
+
+
+<!--        <dependency>-->
+<!--            <groupId>com.example</groupId>-->
+<!--            <artifactId>Product</artifactId>-->
+<!--            <version>0.0.1-SNAPSHOT</version>-->
+<!--        </dependency>-->
+
         <dependency>
             <groupId>com.example</groupId>
-            <artifactId>Inventory</artifactId>
+            <artifactId>Common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-
-
-        <dependency>
-            <groupId>com.example</groupId>
-            <artifactId>Product</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-
 
 
 
