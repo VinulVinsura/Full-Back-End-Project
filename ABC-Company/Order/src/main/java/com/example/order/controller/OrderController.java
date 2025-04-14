@@ -2,7 +2,7 @@ package com.example.order.controller;
 
 import com.example.order.dto.OrderDTO;
 import com.example.order.dto.Response;
-import com.example.order.kafka.OrderProducer;
+import com.example.order.kafka.Producer;
 import com.example.order.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +16,7 @@ import java.util.List;
 public class OrderController {
 
     private  final OrderService orderService;
-    private final OrderProducer orderProducer;
+    private final Producer producer;
 
     @GetMapping("/getorders")
     public List<OrderDTO> getOrders() {

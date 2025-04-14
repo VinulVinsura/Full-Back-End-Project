@@ -11,7 +11,7 @@ import com.example.order.dto.MessageDto;
 import com.example.order.dto.OrderDTO;
 import com.example.order.dto.Response;
 import com.example.order.entity.Order;
-import com.example.order.kafka.OrderProducer;
+import com.example.order.kafka.Producer;
 import com.example.order.repostory.OrderRepo;
 
 import lombok.RequiredArgsConstructor;
@@ -32,7 +32,7 @@ public class OrderServiceImpl implements OrderService {
 
     private final ProductServiceClient productServiceClient;
     private final InventoryServiceClient inventoryServiceClient;
-    private final OrderProducer orderProducer;
+    private final Producer producer;
     public List<OrderDTO> getAllOrders() {
         List<Order>orderList = orderRepo.findAll();
         return modelMapper.map(orderList, new TypeToken<List<OrderDTO>>(){}.getType());
@@ -67,7 +67,7 @@ public class OrderServiceImpl implements OrderService {
                 }
                 Order save = orderRepo.save(modelMapper.map(orderDTO, Order.class));
 
-                orderProducer.sendMessage(new MessageDto("Order Plased","Success"));
+                producer.sendMessage(new MessageDto("Order Plased","Success"));
                 return  new Response("Order save success",modelMapper.map(save, OrderDTO.class));
             }else {
                 return new Response("Item not available try later",null);

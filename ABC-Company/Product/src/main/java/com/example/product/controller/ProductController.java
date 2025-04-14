@@ -4,6 +4,7 @@ import com.example.product.dto.ProductDto;
 import com.example.product.dto.Response;
 import com.example.product.service.ProductService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,12 +13,14 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/product")
 @RequiredArgsConstructor
+@Slf4j
 public class ProductController {
 
     private final ProductService productService;
 
     @GetMapping("/getproducts")
     public List<ProductDto> getProducts() {
+        log.info(Thread.currentThread().getName());
         return productService.getAllProducts();
     }
 

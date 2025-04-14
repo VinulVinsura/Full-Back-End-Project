@@ -7,13 +7,12 @@ import com.example.inventory.dto.MessageDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.annotation.KafkaListener;
-import org.springframework.messaging.Message;
 import org.springframework.stereotype.Service;
 
 @Service
 @Slf4j
 @RequiredArgsConstructor
-public class OrderConsumer {
+public class Consumer {
 
     @KafkaListener(
             topics = "order_topic",
