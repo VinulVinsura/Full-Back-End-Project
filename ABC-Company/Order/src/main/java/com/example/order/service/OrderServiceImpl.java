@@ -4,12 +4,10 @@ package com.example.order.service;
 
 
 
-import com.example.Common.dto.InventoryDTO;
-import com.example.Common.dto.ProductDto;
-import com.example.order.dto.MessageDto;
+//import com.example.Common.dto.InventoryDTO;
+//import com.example.Common.dto.ProductDto;
+import com.example.order.dto.*;
 
-import com.example.order.dto.OrderDTO;
-import com.example.order.dto.Response;
 import com.example.order.entity.Order;
 import com.example.order.kafka.Producer;
 import com.example.order.repostory.OrderRepo;

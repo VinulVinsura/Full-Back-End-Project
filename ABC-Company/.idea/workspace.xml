@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3fc39b1e-86db-4081-bf9d-e3824e6974a2" name="Changes" comment="creat docker-compose file and dockerized application">
+      <change afterPath="$PROJECT_DIR$/Order/src/main/java/com/example/order/dto/InventoryDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Order/src/main/java/com/example/order/dto/ProductDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Inventory/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Inventory/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order/src/main/java/com/example/order/kafka/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Order/src/main/java/com/example/order/kafka/Producer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order/src/main/java/com/example/order/service/InventoryServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Order/src/main/java/com/example/order/service/InventoryServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order/src/main/java/com/example/order/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Order/src/main/java/com/example/order/service/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order/src/main/java/com/example/order/service/ProductServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Order/src/main/java/com/example/order/service/ProductServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Order/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Order/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Product/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2v1bbQw9UFoPjfDAszaluRMWMM1" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/My Project/EFMS Project/efms-ui-template-main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.22873563&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\My Project\Microservice\ABC-Company\Common\src\main\java\com\example\Common" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\My Project\Microservice\ABC-Company" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.order.dto" />
+      <recent name="com.example.Common.dto" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn install" />
+      <command value="mvn clean install" />
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="Application" />
+        <option value="CompoundRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ProductApplication">
+    <configuration name="CommonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Common" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Common.CommonApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiscoveryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Discovery" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.discovery.DiscoveryApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Gateway.GatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Inventory" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.inventory.InventoryApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Order" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.order.OrderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="true" nameIsGenerated="true">
+      <module name="Product" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.product.ProductApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.CommonApplication" />
+      <item itemvalue="Spring Boot.OrderApplication" />
+      <item itemvalue="Spring Boot.GatewayApplication" />
+      <item itemvalue="Spring Boot.DiscoveryApplication" />
+      <item itemvalue="Spring Boot.InventoryApplication" />
+      <item itemvalue="Spring Boot.ProductApplication" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3fc39b1e-86db-4081-bf9d-e3824e6974a2" name="Changes" comment="" />
+      <created>1743315599276</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743315599276</updated>
+      <workItem from="1743315600400" duration="3938000" />
+      <workItem from="1743397281187" duration="8686000" />
+      <workItem from="1743415382164" duration="113000" />
+      <workItem from="1743415704793" duration="1527000" />
+      <workItem from="1743418380801" duration="2769000" />
+      <workItem from="1743421472502" duration="881000" />
+      <workItem from="1743435880473" duration="1808000" />
+      <workItem from="1743437973417" duration="560000" />
+      <workItem from="1743438683783" duration="318000" />
+      <workItem from="1743439022987" duration="2187000" />
+      <workItem from="1743441236733" duration="1240000" />
+      <workItem from="1743481849012" duration="977000" />
+      <workItem from="1743482844231" duration="1524000" />
+      <workItem from="1743484463805" duration="844000" />
+      <workItem from="1743485330483" duration="8052000" />
+      <workItem from="1743562460568" duration="2550000" />
+      <workItem from="1743565760025" duration="16505000" />
+      <workItem from="1743648866451" duration="5647000" />
+      <workItem from="1744433259171" duration="15754000" />
+      <workItem from="1744463030634" duration="477000" />
+      <workItem from="1744464598340" duration="2250000" />
+      <workItem from="1744486896272" duration="2700000" />
+      <workItem from="1744613833001" duration="6151000" />
+      <workItem from="1744640351159" duration="1688000" />
+      <workItem from="1744795141992" duration="13011000" />
+      <workItem from="1744992806391" duration="3617000" />
+      <workItem from="1745166896830" duration="4175000" />
+      <workItem from="1745211838751" duration="1670000" />
+    </task>
+    <task id="LOCAL-00001" summary="Eureka server adding project">
+      <option name="closed" value="true" />
+      <created>1743415024816</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1743415024816</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Eureka server adding project">
+      <option name="closed" value="true" />
+      <created>1743438246938</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1743438246938</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Gateway issue">
+      <option name="closed" value="true" />
+      <created>1743488444678</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1743488444678</updated>
+    </task>
+    <task id="LOCAL-00004" summary="set servlet-context-path in all service properties file">
+      <option name="closed" value="true" />
+      <created>1743507247676</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1743507247676</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add common module service">
+      <option name="closed" value="true" />
+      <created>1743569139231</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1743569139233</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add prometheus">
+      <option name="closed" value="true" />
+      <created>1743649199034</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1743649199034</updated>
+    </task>
+    <task id="LOCAL-00007" summary="creat docker-compose file and dockerized application">
+      <option name="closed" value="true" />
+      <created>1744614556648</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1744614556648</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Eureka server adding project" />
+    <MESSAGE value="Gateway issue" />
+    <MESSAGE value="set servlet-context-path in all service properties file" />
+    <MESSAGE value="add common module service" />
+    <MESSAGE value="Add prometheus" />
+    <MESSAGE value="creat docker-compose file and dockerized application" />
+    <option name="LAST_COMMIT_MESSAGE" value="creat docker-compose file and dockerized application" />
+  </component>
+</project>
